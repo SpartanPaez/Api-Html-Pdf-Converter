@@ -1,0 +1,431 @@
+﻿@model WebApp.Models.DatosCliente
+
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<script src="~/js/jquery/jquery.min.js"></script>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+<body>
+    <div class="container" style="padding: 1px;">
+        <div class="row">
+            <div class="col-md-12">
+                <h1>Formulario de actualización de Datos</h1>
+            </div>
+            <br>
+        </div>
+
+        <div class="row" style="padding: 0px;">
+            <div class="col-xs-12 col-md-12">
+                <div class="form-group">
+                    <label for="name">Nombre y Apellido / Razón Social</label>
+                    <input type="text" class="form-control" id="name"value="@Model.Nombres">
+                </div>
+            </div>
+        </div>
+
+        <h5>Tipo y Número de Documento</h5>
+        <div class="row">
+            <div class="col-xs-3 col-md-3">
+                <div class="form-group">
+                    <label for="name">C.I Nº:</label>
+                    <input type="text" class="form-control" id="name" placeholder="" value="@Model.Cedula">
+                </div>
+            </div>
+
+            <div class="col-xs-3 col-md-3">
+                <div class="form-group">
+                    <label for="name">Pasaporte Nº:</label>
+                    <input type="text" class="form-control" id="name" placeholder="">
+                </div>
+            </div>
+
+            <div class="col-xs-3 col-md-3">
+                <div class="form-group">
+                    <label for="name">R.U.C</label>
+                    <input type="text" class="form-control" id="name" placeholder="" value="@Model.Ruc">
+                </div>
+            </div>
+
+            <div class="col-xs-3 col-md-3">
+                <div class="form-group">
+                    <label for="name">Codigo del Cliente:</label>
+                    <input type="text" class="form-control" id="name" placeholder="" value="@Model.CodigoCliente">
+                </div>
+            </div>
+            <div class="container">
+                <h5>Datos del cliente</h5>
+                <div class="row">
+                    <div class="col-xs-2 col-md-3">
+                        <h6>Persona Física: Datos Particulares</h6>
+                    </div>
+                    <div class="col-xs-2 col-md-4">
+                        <h6>Persona Jurídica: Datos de la Empresa</h6>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-xs-3 col-md-10">
+                <div class="form-group">
+                    <label for="name">Calle:</label>
+                    <input type="text" class="form-control" id="name" placeholder="" value="@Model.Direccion">
+                </div>
+            </div>
+
+            <div class="col-xs-3 col-md-2">
+                <div class="form-group">
+                    <label for="name">Nº:</label>
+                    <input type="text" class="form-control" id="name" placeholder="" value="@Model.NumeroDireccion">
+                </div>
+            </div>
+            <div class="col-xs-3 col-md-12">
+                <div class="form-group">
+                    <label for="name">Referencia de la dirección (cerca de/al lado de/frente a/detrás de):</label>
+                    <input type="text" class="form-control" id="name" placeholder="" value="@Model.ReferenciaDireccion">
+                </div>
+            </div>
+
+            <div class="col-xs-3 col-md-3">
+                <div class="form-group">
+                    <label for="name">Edificio</label>
+                    <input type="text" class="form-control" id="name" placeholder="" value="@Model.Edificio">
+                </div>
+            </div>
+
+            <div class="col-xs-3 col-md-1">
+                <div class="form-group">
+                    <label for="name">Piso:</label>
+                    <input type="text" class="form-control" id="name" placeholder="" value="@Model.Piso">
+                </div>
+            </div>
+
+            <div class="col-xs-3 col-md-2">
+                <div class="form-group">
+                    <label for="name">Dpto. Nº:</label>
+                    <input type="text" class="form-control" id="name" placeholder="" value="@Model.DepartamentoNumero">
+                </div>
+            </div>
+
+            <div class="col-xs-3 col-md-3">
+                <div class="form-group">
+                    <label for="name">Barrio:</label>
+                    <input type="text" class="form-control" id="name" placeholder="" value="@Model.Barrio">
+                </div>
+            </div>
+
+            <div class="col-xs-3 col-md-3">
+                <div class="form-group">
+                    <label for="name">Ciudad:</label>
+                    <input type="text" class="form-control" id="name" placeholder="" value="@Model.Ciudad">
+                </div>
+            </div>
+
+            <div class="col-xs-3 col-md-2">
+                <div class="form-group">
+                    <label for="name">Departamento:</label>
+                    <input type="text" class="form-control" id="name" placeholder="" value="@Model.Departamento">
+                </div>
+            </div>
+            <div class="col-xs-3 col-md-2">
+                <div class="form-group">
+                    <label for="name">Télefono fijo:</label>
+                    <input type="text" class="form-control" id="name" placeholder="" value="@Model.TelefonoFijo">
+                </div>
+            </div>
+
+            <div class="col-xs-3 col-md-2">
+                <div class="form-group">
+                    <label for="name">Celular:</label>
+                    <input type="text" class="form-control" id="name" placeholder="" value="@Model.TelefonoCelular">
+                </div>
+            </div>
+
+            <div class="col-xs-3 col-md-5">
+                <div class="form-group">
+                    <label for="name">Correo electrónico:</label>
+                    <input type="text" class="form-control" id="name" placeholder="" value="@Model.CorreoElectronico">
+                </div>
+            </div>
+
+            <div class="container">
+                <h5>Datos laborales</h5>
+            </div>
+            <div class="col-xs-3 col-md-4">
+                <div class="form-group">
+                    <label for="name">Lugar de trabajo: </label>
+                    <input type="text" class="form-control" id="name" placeholder="" value="@Model.LugarDeTrabajo">
+                </div>
+            </div>
+
+            <div class="col-xs-3 col-md-4">
+                <div class="form-group">
+                    <label for="name">Profesión: </label>
+                    <input type="text" class="form-control" id="name" placeholder="" value="@Model.Profesion">
+                </div>
+            </div>
+
+            <div class="col-xs-3 col-md-4">
+                <div class="form-group">
+                    <label for="name">Ocupación: </label>
+                    <input type="text" class="form-control" id="name" placeholder="" value="@Model.Ocupacion">
+                </div>
+            </div>
+
+            <div class="col-xs-3 col-md-10">
+                <div class="form-group">
+                    <label for="name">Calle: </label>
+                    <input type="text" class="form-control" id="name" placeholder="" value="@Model.DireccionLaboral">
+                </div>
+            </div>
+
+            <div class="col-xs-3 col-md-2">
+                <div class="form-group">
+                    <label for="name">Nº: </label>
+                    <input type="text" class="form-control" id="name" placeholder="" value="@Model.NumeroDireccionLaboral">
+                </div>
+            </div>
+
+            <div class="col-xs-3 col-md-12">
+                <div class="form-group">
+                    <label for="name">Referencia de la dirección (cerca de/al lado de/frente a/detrás de):: </label>
+                    <input type="text" class="form-control" id="name" placeholder="" value="@Model.ReferencialDireccionLaboral">
+                </div>
+            </div>
+
+            <div class="col-xs-3 col-md-3">
+                <div class="form-group">
+                    <label for="name">Edificio</label>
+                    <input type="text" class="form-control" id="name" placeholder="" value="@Model.EdificioLaboral">
+                </div>
+            </div>
+
+            <div class="col-xs-3 col-md-1">
+                <div class="form-group">
+                    <label for="name">Piso:</label>
+                    <input type="text" class="form-control" id="name" placeholder="" value="@Model.PisoLaboral">
+                </div>
+            </div>
+
+            <div class="col-xs-3 col-md-2">
+                <div class="form-group">
+                    <label for="name">Dpto. Nº:</label>
+                    <input type="text" class="form-control" id="name" placeholder="" value="@Model.DepartamentoLaboral">
+                </div>
+            </div>
+
+            <div class="col-xs-3 col-md-3">
+                <div class="form-group">
+                    <label for="name">Barrio:</label>
+                    <input type="text" class="form-control" id="name" placeholder="" value="@Model.BarrioLaboral">
+                </div>
+            </div>
+
+            <div class="col-xs-3 col-md-3">
+                <div class="form-group">
+                    <label for="name">Ciudad:</label>
+                    <input type="text" class="form-control" id="name" placeholder="" value="@Model.CiudadLaboral">
+                </div>
+            </div>
+
+            <div class="col-xs-3 col-md-2">
+                <div class="form-group">
+                    <label for="name">Departamento:</label>
+                    <input type="text" class="form-control" id="name" placeholder="" value="@Model.DepartamentoLaboral">
+                </div>
+            </div>
+
+            <div class="col-xs-3 col-md-2">
+                <div class="form-group">
+                    <label for="name">Télefono fijo:</label>
+                    <input type="text" class="form-control" id="name" placeholder="" value="@Model.TelefonoLaboral">
+                </div>
+            </div>
+
+            <div class="col-xs-3 col-md-2">
+                <div class="form-group">
+                    <label for="name">Celular:</label>
+                    <input type="text" class="form-control" id="name" placeholder="" value="@Model.CelularLaboral">
+                </div>
+            </div>
+
+            <div class="col-xs-3 col-md-6">
+                <div class="form-group">
+                    <label for="name">Correo electrónico:</label>
+                    <input type="text" class="form-control" id="name" placeholder="" value="@Model.CorreoElectronico">
+                </div>
+            </div>
+
+            <div class="container">
+                <h5>Datos de la cuenta</h5>
+            </div>
+
+            @foreach(var ItemCuenta in @Model.Cuentas)
+            {
+                
+            <div class="col-xs-3 col-md-6">
+                <div class="form-group">
+                    <label for="name">Nombre de la cuenta:</label>
+                    <input type="text" class="form-control" id="name" placeholder="" value="@ItemCuenta.NombreDeCuenta">
+                </div>
+            </div>
+
+
+            <div class="col-xs-3 col-md-6">
+                <div class="form-group">
+                    <label for="name">Nº de la cuenta:</label>
+                    <input type="text" class="form-control" id="name" placeholder="" value="@ItemCuenta.NumeroDecuenta">
+                </div>
+            </div>
+            <br/>
+            <div class="col-xs-3 col-md-3">
+                <div class="form-group">
+                    <label for="name">Dirección de la cuenta:</label>
+                </div>
+            </div>
+
+            <div class="col-xs-1 col-md-5">
+                <div class="form-group" style="border: 1px solid #ced4da; padding-left: 10px;">
+                        @if(ItemCuenta.DireccionCuenta == "Particular")
+                        {
+                        <label><input type="checkbox" checked="checked"> Dirección Particular / Dirección de la
+                        Empresa</label>
+                        }
+                        else
+                        {
+                        <label><input type="checkbox" > Dirección Particular / Dirección de la
+                        Empresa</label>
+                        }
+                    </div>
+            </div>
+                <div class="col-xs-1 col-md-3  ">
+                    <div class="form-group" style="border: 1px solid #ced4da; padding-left: 10px;">
+                        @if (ItemCuenta.DireccionCuenta == "Laboral")
+                        {
+                            <label><input type="checkbox" checked ="checked"> Dirección Laboral</label>
+                        }
+                        else
+                        {
+                            <label><input type="checkbox"> Dirección Laboral</label>
+                        }
+                    </div>
+            </div>
+
+            <div class="col-xs-3 col-md-12">
+                <div class="form-group">
+                    <h6><b>Extracto de la cuenta</b></h6>
+                </div>
+            </div>
+            }
+
+
+            <div class="col-xs-3 col-md-12">
+                <div class="form-group ">
+                    <p>Tenés acceso a tus extractos sin costo alguno a través de la <b>Banca Web y App</b>, para lo cual
+                        debes contar con <b>PIN</b> de <b>Banca Electrónica</b> . En caso de que adicionalmente desees
+                        recibir tu extracto por otro canal, elegí una de las siguientes opciones:
+                    </p>
+                </div>
+            </div>
+            <div class="col-xs-3 col-md-6">
+                <div style="border: 1px solid #ced4da; padding-left: 10px;">
+                    <label><input type="checkbox"> Correo Electrónico (Sin Costo) → El extracto será remitido al correo
+                        electrónico declarado en el banco.</label>
+                </div>
+            </div>
+
+            <div class="col-xs-3 col-md-6">
+                <div style="border: 1px solid #ced4da; padding-left: 10px;">
+                    <label><input type="checkbox"> Extracto impreso(Costo según terifario vigente) → El extracto será
+                        remitido a la dirección declarada en el banco</label>
+                </div>
+            </div>
+            <br>
+            <div class="col-xs-1 col-md-6 ">
+                <div class="form-group" style="border: 1px solid#ced4da; padding-left: 10px;">
+                    <label><input type="checkbox"> Correo Electrónico Particular / Empresa <input type="checkbox">
+                        Correo Electrónico Laboral</label>
+                </div>
+            </div>
+            <div class="col-xs-3 col-md-12">
+                <div class="form-group">
+                    <h6><b>Extracto de tarjetas</b></h6>
+                </div>
+            </div>
+
+            <div class="col-xs-3 col-md-12">
+                <div class="form-group ">
+                    <p>Tenés acceso a tus extractos sin costo alguno a través de la <b>Banca Web y App</b>, para lo cual
+                        debes contar con <b>PIN</b> de <b>Banca Electrónica</b> . En caso de que adicionalmente desees
+                        recibir tu extracto por otro canal, elegí una de las siguientes opciones:
+                    </p>
+                </div>
+            </div>
+            <div class="col-xs-3 col-md-6">
+                <div style="border: 1px solid #ced4da; padding-left: 10px;">
+                    <label><input type="checkbox"> Correo Electrónico (Sin Costo) → el extracto será remitido al correo
+                        electrónico declarado en el banco.</label>
+                </div>
+            </div>
+
+            <div class="col-xs-3 col-md-6">
+                <div style="border: 1px solid #ced4da;padding-left: 10px;">
+                    <label><input type="checkbox"> Extracto impreso(Costo según terifario vigente) → El extracto será
+                        remitido a la dirección declarada en el banco</label>
+                </div>
+            </div>
+            <br>
+            <div class="col-xs-1 col-md-6 ">
+                <div class="form-group" style="border: 1px solid#ced4da; padding-left: 10px;">
+                    <label><input type="checkbox"> Correo Electrónico Particular / Empresa <input type="checkbox">
+                        Correo Electrónico Laboral</label>
+                </div>
+            </div>
+            <div class="col-xs-1 col-md-6 ">
+                <div class="form-group" style="border: 1px solid#ced4da; padding-left: 10px;">
+                    <label><input type="checkbox"> Dirección Particular / Dirección Empresa <input type="checkbox">
+                        Dirección Laboral</label>
+                </div>
+            </div>
+
+            <div class="col-xs-1 col-md-12">
+                <div class="form-group" style="padding:1px;">
+                    <br>
+                    <br>
+                    <center>________________________________________________</center>
+                    <center><label for=""><b>Personas Físicas:</b> Firma del cliente</label></center>
+                    <center><label for=""><b>Personas Jurídicas:</b> Firma de los representantes legales y sello de la
+                            empresa</label></center>
+                    <center><b>_____________Uso exclusivo del Banco_____________</b></center>
+                </div>
+            </div>
+            <br>
+            <div class="col-xs-3 col-md-6">
+                <div>
+                    <center>________________________________________________</center>
+                    <center><Label>Procesador por</Label></center>
+                </div>
+            </div>
+
+            <div class="col-xs-3 col-md-6">
+                <div>
+                    <center>________________________________________________</center>
+                    <center><Label>Verificado por</Label></center>
+                </div>
+            </div>
+            <br>
+        </div>
+    </div>
+</body>
+
+<script type="text/javascript">
+function EjecutarReporte () {
+    debugger;
+    var html = $("#container").html();
+    html = html.replace(/</g, "start").replace(/>/g, "end");
+
+    window.open("/Home/GenerarReportePDF?ReporteHtml="+html,"_blank");
+}
+window.onload = function() {
+    EjecutarReporte();
+};
+</script>
